@@ -1,12 +1,13 @@
 package co.ntx.qr
 
-import android.Manifest
-import android.content.pm.PackageManager
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.app.ActivityCompat
 import android.widget.TextView
 
+/**
+ * 主类
+ * xtn
+ */
 class MainActivity : AppCompatActivity() {
 
     private var tv : TextView? = null
@@ -22,7 +23,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun startQr(){
         Permission().getPermission(this)
-
     }
 
 

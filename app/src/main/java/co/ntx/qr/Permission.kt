@@ -7,6 +7,10 @@ import android.support.v4.app.ActivityCompat
 import android.support.v7.app.AppCompatActivity
 import org.jetbrains.anko.alert
 
+/**
+ * 权限相关
+ * xtn
+ */
 class Permission : AppCompatActivity() {
 
 

@@ -1,10 +1,8 @@
 package co.ntx.qr
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
 import com.google.zxing.integration.android.IntentIntegrator
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
@@ -33,5 +31,18 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        val intentResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
+        if (intentResult != null){
+            if (intentResult.contents == null){
+                toast("扫描错误")
+            }else{
+                toast(intentResult.contents)
+                text1.text = intentResult.contents
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data)
+    }
 
 }

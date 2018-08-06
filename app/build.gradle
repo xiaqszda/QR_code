@@ -36,6 +36,7 @@ dependencies {
     compile "org.jetbrains.anko:anko-design:0.9.1"
     compile "org.jetbrains.anko:anko-recyclerview-v7:0.9.1"
     compile 'com.journeyapps:zxing-android-embedded:3.5.0'
+
 }
 configurations.all {
     resolutionStrategy.eachDependency { DependencyResolveDetails details ->

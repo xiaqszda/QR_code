@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/barcode_scanner"
+            zxing_preview_scaling_strategy="centerCrop"
+            zxing_use_texture_view="false"/>
+
+</merge>

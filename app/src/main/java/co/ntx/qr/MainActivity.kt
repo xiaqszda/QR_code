@@ -1,8 +1,8 @@
 package co.ntx.qr
 
 import android.content.Intent
-import android.hardware.camera2.CameraManager
 import android.os.Bundle
+import co.ntx.qr.zxing_x.ZxingX
 import com.google.zxing.integration.android.IntentIntegrator
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
@@ -26,7 +26,7 @@ class MainActivity : BaseActivity() {
     private fun startQr(){
         Permission().getPermission(this)
         scan.setOnClickListener{
-            camera.setCaptureActivity(ZxingActivity::class.java).initiateScan()
+            camera.setCaptureActivity(ZxingX::class.java).initiateScan()
 //            camera.initiateScan()
 
             toast("开始扫描")

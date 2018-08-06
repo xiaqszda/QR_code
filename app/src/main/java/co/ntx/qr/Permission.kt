@@ -23,7 +23,7 @@ class Permission : AppCompatActivity() {
     }
 
 
-    fun getPermission(context: Activity, permissionWhat : String){
+    private fun getPermission(context: Activity, permissionWhat : String){
         val permissions = arrayOf(permissionWhat)
         if (ActivityCompat.shouldShowRequestPermissionRationale(context, permissionWhat)){
             alert("请求相机权限") {

@@ -1,15 +1,18 @@
 package co.ntx.qr
 
-import android.content.Context
-import android.graphics.Canvas
-import android.util.AttributeSet
-import com.journeyapps.barcodescanner.ViewfinderView
-
-internal class ZxingActivity(context: Context, attrs: AttributeSet) : ViewfinderView(context,attrs) {
+import android.os.Bundle
+import com.journeyapps.barcodescanner.CaptureManager
+import kotlinx.android.synthetic.main.zxing_activity.*
 
 
+internal class ZxingActivity : BaseActivity() {
 
-    override fun onDraw(canvas: Canvas?) {
-        super.onDraw(canvas)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.zxing_activity)
+        val capture = CaptureManager(this, dbv)
+        capture.initializeFromIntent(intent, savedInstanceState)
+        capture.decode()
+
     }
 }

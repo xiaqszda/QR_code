@@ -12,5 +12,8 @@
             app:zxing_framing_rect_height="200dp"
             app:zxing_preview_scaling_strategy="fitXY"
             app:zxing_use_texture_view="true"
+            app:zxing_scanner_layout="@layout/barcode_scanner"
     />
+
+
 </android.support.constraint.ConstraintLayout>

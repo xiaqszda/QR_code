@@ -31,11 +31,11 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     //anko
-    compile "org.jetbrains.anko:anko-sdk15:0.9.1" // So here it's 15 too
-    compile "org.jetbrains.anko:anko-appcompat-v7:0.9.1"
-    compile "org.jetbrains.anko:anko-design:0.9.1"
-    compile "org.jetbrains.anko:anko-recyclerview-v7:0.9.1"
-    compile 'com.journeyapps:zxing-android-embedded:3.5.0'
+    api "org.jetbrains.anko:anko-sdk15:0.9.1" // So here it's 15 too
+    api "org.jetbrains.anko:anko-appcompat-v7:0.9.1"
+    api "org.jetbrains.anko:anko-design:0.9.1"
+    api "org.jetbrains.anko:anko-recyclerview-v7:0.9.1"
+    api 'com.journeyapps:zxing-android-embedded:3.5.0'
 
 }
 configurations.all {
